@@ -8,12 +8,11 @@ import org.springframework.web.bind.annotation.RestController;
 
 @Slf4j
 @RestController
-@RequestMapping("/api/open")
-public class OpenController {
-    
+@RequestMapping("/api/auth")
+public class SecuredController {
     @GetMapping
     public ResponseEntity<String> helloWorld() {
         log.debug("----------------------------Incoming Requests------------------------");
-        return ResponseEntity.ok("Hello World");
+        return ResponseEntity.ok("Hello World and it is secured");
     }
 }
